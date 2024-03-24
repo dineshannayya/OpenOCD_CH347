@@ -19,4 +19,5 @@ Reference code is from: https://github.com/WCHSoftGroup/ch347/tree/main/OpenOCD_
     ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="660", GROUP="plugdev", TAG+="uaccess"
     ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55dd", MODE="660", GROUP="plugdev", TAG+="uaccess"
 
-     
+# To run the Riscduino openocd
+  openocd -f ch347.cfg -f riscduino.cfg     
