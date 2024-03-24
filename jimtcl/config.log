@@ -1,0 +1,144 @@
+Invoked as: /home/dinesha/workarea/tools/source/waveshare/ch347/OpenOCD_SourceCode_CH347/jimtcl/configure --disable-install-jim --with-ext=json --minimal --disable-ssl --disable-option-checking --prefix=/usr/local --cache-file=/dev/null --srcdir=.
+Tclsh: /usr/bin/tclsh
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c:1:10: fatal error: util.h: No such file or directory
+    1 | #include <util.h>
+      |          ^~~~~~~~
+compilation terminated.
+child process exited abnormally
+============
+The failed code was:
+#include <util.h>
+int main(void) {
+
+return 0;
+}
+============
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c:1:10: fatal error: crt_externs.h: No such file or directory
+    1 | #include <crt_externs.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+child process exited abnormally
+============
+The failed code was:
+#include <crt_externs.h>
+int main(void) {
+
+return 0;
+}
+============
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c: In function 'main':
+conftest__.c:3:12: error: size of array '_x' is negative
+    3 | static int _x[sizeof(time_t) == 4 ? 1 : -1] = { 1 };
+      |            ^~
+child process exited abnormally
+============
+The failed code was:
+#include <time.h>
+int main(void) {
+static int _x[sizeof(time_t) == 4 ? 1 : -1] = { 1 };
+return 0;
+}
+============
+Failed: ccache cc conftest__.c -o conftest__
+/usr/bin/ld: /tmp/ccJuHbQI.o: in function `main':
+conftest__.c:(.text+0x9): undefined reference to `sys_signame'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void sys_signame(void);
+int main(void) {
+sys_signame();
+return 0;
+}
+============
+Failed: ccache cc conftest__.c -o conftest__
+/usr/bin/ld: /tmp/ccD8h9c1.o: in function `main':
+conftest__.c:(.text+0x9): undefined reference to `openpty'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void openpty(void);
+int main(void) {
+openpty();
+return 0;
+}
+============
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c: In function 'main':
+conftest__.c:4:40: error: 'struct stat' has no member named 'st_mtimespec'
+    4 | static struct stat _s; return sizeof(_s.st_mtimespec);
+      |                                        ^
+child process exited abnormally
+============
+The failed code was:
+#include <sys/types.h>
+#include <sys/stat.h>
+int main(void) {
+static struct stat _s; return sizeof(_s.st_mtimespec);
+return 0;
+}
+============
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c: In function 'main':
+conftest__.c:3:12: error: size of array '_x' is negative
+    3 | static int _x[sizeof(off_t) == 4 ? 1 : -1] = { 1 };
+      |            ^~
+child process exited abnormally
+============
+The failed code was:
+#include <sys/types.h>
+int main(void) {
+static int _x[sizeof(off_t) == 4 ? 1 : -1] = { 1 };
+return 0;
+}
+============
+Failed: ccache cc conftest__.c -o conftest__ -lutil
+/usr/bin/ld: /tmp/cco7hKmi.o: in function `main':
+conftest__.c:(.text+0x9): undefined reference to `_NSGetEnviron'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void _NSGetEnviron(void);
+int main(void) {
+_NSGetEnviron();
+return 0;
+}
+============
+Failed: ccache cc -c conftest__.c -o conftest__.o
+conftest__.c: In function 'main':
+conftest__.c:4:1: error: too few arguments to function 'mkdir'
+    4 | mkdir("/dummy");
+      | ^~~~~
+In file included from conftest__.c:2:
+/usr/include/x86_64-linux-gnu/sys/stat.h:317:12: note: declared here
+  317 | extern int mkdir (const char *__path, __mode_t __mode)
+      |            ^~~~~
+child process exited abnormally
+============
+The failed code was:
+#include <sys/types.h>
+#include <sys/stat.h>
+int main(void) {
+mkdir("/dummy");
+return 0;
+}
+============
+Failed: ccache cc conftest__.c -o conftest__ -lutil
+/usr/bin/ld: /tmp/ccICDAjl.o: in function `main':
+conftest__.c:(.text+0x9): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void dlopen(void);
+int main(void) {
+dlopen();
+return 0;
+}
+============
